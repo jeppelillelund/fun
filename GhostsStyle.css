@@ -33,20 +33,32 @@ input{
 #generalList, #ouijaList, #spiritList, #triggerList{
     display: none;
     list-style: none;
-    max-height:98%;
+    max-height:109%;
     margin:0;
     padding:0;
     overflow: auto;
-    height: 99%;
+    height: 109%;
 }
 #listDiv{
     position: absolute;
     top: 11%;
     right: 12%;
     transform: translate(50%, 0%);
+    height: 70%;
     width: 24%;
-    height: 90%;
 }
 label{
     font-size: 20px;
+}
+.objectiveDiv{
+    position: absolute;
+    bottom: 0.3%;
+    right: 12.6%;
+    transform: translate(50%, 0%);
+    width: 24.7%;
+    height: 10%;
+    border: black 1px solid;
+}
+.objBtn{
+    margin-left: 8%;
 }

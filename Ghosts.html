@@ -155,6 +155,7 @@
             </tbody>
         </table>
         <div id="listDiv">
+
             <ul id="generalList">
                 <li>  Anybody here? </li>
                 <li>  Anybody in the room? </li>
@@ -332,6 +333,48 @@
                 <li> Show me. </li>
             </ul>
         </div>
+        <div class="objectiveDiv">
+            <label>Objective 1:</label>
+            <select class="objective" id="obj1">
+                <option value="Discover what type of ghost">Discover what type of ghost</option>
+            </select>
+            <br>
+            <label id="obj2">Objective 2:</label>
+            <select class="objective" id="obj2">
+                <option value="EMF Reader evidence">EMF Reader evidence</option>
+                <option value="Detect Below 10°">Detect Below 10°</option>
+                <option value="Photo of dirty sink">Photo of dirty sink</option>
+                <option value="Detect with motion sensor">Detect with motion sensor</option>
+                <option value="Prevent hunt with crucifix">Prevent hunt with crucifix</option>
+                <option value="Witness ghost event">Witness ghost event</option>
+                <option value="Cleanse with smudge stick">Cleanse with smudge stick</option>
+            </select>
+            <button class="objBtn" onclick="objDone2()">Objective done</button>
+            <br>
+            <label id="obj3">Objective 3:</label>
+            <select class="objective" id="obj3">
+                <option value="EMF Reader evidence">EMF Reader evidence</option>
+                <option value="Detect Below 10°">Detect Below 10°</option>
+                <option value="Photo of dirty sink">Photo of dirty sink</option>
+                <option value="Detect with motion sensor">Detect with motion sensor</option>
+                <option value="Prevent hunt with crucifix">Prevent hunt with crucifix</option>
+                <option value="Witness ghost event">Witness ghost event</option>
+                <option value="Cleanse with smudge stick">Cleanse with smudge stick</option>
+            </select>
+            <button class="objBtn"onclick="objDone3()">Objective done</button>
+            <br>
+            <label id="obj4">Objective 4:</label>
+            <select class="objective" id="obj4">
+                <option value="EMF Reader evidence">EMF Reader evidence</option>
+                <option value="Detect Below 10°">Detect Below 10°</option>
+                <option value="Photo of dirty sink">Photo of dirty sink</option>
+                <option value="Detect with motion sensor">Detect with motion sensor</option>
+                <option value="Prevent hunt with crucifix">Prevent hunt with crucifix</option>
+                <option value="Witness ghost event">Witness ghost event</option>
+                <option value="Cleanse with smudge stick">Cleanse with smudge stick</option>
+            </select>
+            <button class="objBtn" onclick="objDone4()">Objective done</button>
+        </div>
     </body>
     <script>
         const startingMinutes = 5;
@@ -352,47 +395,57 @@
             setInterval(updateCountdown, 1000);
         }
 
+            var genList = document.getElementById("generalList");
+            var ouiList = document.getElementById("ouijaList");
+            var spiList = document.getElementById("spiritList");
+            var triList = document.getElementById("triggerList");
+        
         function showListGen(){
-            var listelem = document.getElementById("generalList");
-            var displaySettings = listelem.style.display;
-
+            var displaySettings = genList.style.display;
             if(displaySettings == 'none'){
-                listelem.style.display = "block";
+                genList.style.display = "block";
+                ouiList.style.display = "none";
+                spiList.style.display = "none";
+                triList.style.display = "none";
             }else{
-                listelem.style.display = "none";
+                genList.style.display = "none";
             }
         }
 
         function showListOiuja(){
-            var listelem = document.getElementById("ouijaList");
-            var displaySettings = listelem.style.display;
-
+            var displaySettings = ouiList.style.display;
             if(displaySettings == 'none'){
-                listelem.style.display = "block";
+                genList.style.display = "none";
+                ouiList.style.display = "block";
+                spiList.style.display = "none";
+                triList.style.display = "none";
             }else{
-                listelem.style.display = "none";
+                ouiList.style.display = "none";
             }
         }
         
         function showListSpiritBox(){
-            var listelem = document.getElementById("spiritList");
-            var displaySettings = listelem.style.display;
-
+            var displaySettings = spiList.style.display;
             if(displaySettings == 'none'){
-                listelem.style.display = "block";
+                genList.style.display = "none";
+                ouiList.style.display = "none";
+                spiList.style.display = "block";
+                triList.style.display = "none";
             }else{
-                listelem.style.display = "none";
+                spiList.style.display = "none";
             }
         }
         
         function showListTrigger(){
-            var listelem = document.getElementById("triggerList");
-            var displaySettings = listelem.style.display;
+            var displaySettings = triList.style.display;
 
             if(displaySettings == 'none'){
-                listelem.style.display = "block";
+                genList.style.display = "none";
+                ouiList.style.display = "none";
+                spiList.style.display = "none";
+                triList.style.display = "block";
             }else{
-                listelem.style.display = "none";
+                triList.style.display = "none";
             }
         }
         // Evidence checkboxes
@@ -470,6 +523,21 @@
                 }
 
             }
+        }
+
+        function objDone2(){
+            var obj2 = document.getElementById("obj2");
+            obj2.style.color = checkedColor;
+        }
+
+        function objDone3(){
+            var obj3 = document.getElementById("obj3");
+            obj3.style.color = checkedColor;
+        }
+
+        function objDone4(){
+            var obj2 = document.getElementById("obj4");
+            obj4.style.color = checkedColor;
         }
     </script>
 </html>
