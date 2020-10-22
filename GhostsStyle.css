@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #2b3e50;
+    color: white;
+    overflow: hidden;
+}
+table, tbody, tr, td{
+    border: black 1px solid;
+}
+table{
+    width: 100vw;
+    height: 100vh;
+    table-layout: fixed;
+}
+td {
+    font-size: 40px;
+    vertical-align: top;
+    text-align: center;
+}
+.div{    
+    text-align: left;
+    font-size: 18px;
+    padding-left: 40px;
+}
+input{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.emptyTD{
+    border: 0px;
+}
+#generalList, #ouijaList, #spiritList, #triggerList{
+    display: none;
+    list-style: none;
+    max-height:98%;
+    margin:0;
+    padding:0;
+    overflow: auto;
+    height: 99%;
+}
+#listDiv{
+    position: absolute;
+    top: 11%;
+    right: 12%;
+    transform: translate(50%, 0%);
+    width: 24%;
+    height: 90%;
+}
+label{
+    font-size: 20px;
+}

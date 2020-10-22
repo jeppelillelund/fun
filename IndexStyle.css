@@ -1,0 +1,139 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: #ffffff;
+    border: 2px solid #6a6a6a;
+}
+.TopNavbar{
+    background: #000081;
+    height: 30px;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: #fff;
+    text-align: center;
+}
+.CmdLine{
+    background: #c0c0bd;
+    height: 25px;
+    width: 100vw;
+    position: fixed;
+    top: 30px;
+    left: 0px;
+    color: #fff;
+    border-bottom: #6a6a6a solid 2px;
+}
+.CmdLine a{
+    color: #000;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.FuncLine{
+    background: #c0c0bd;
+    height: 60px;
+    width: 100vw;
+    position: fixed;
+    top: 57px;
+    left: 0px;
+    color: #fff;
+}
+.FuncLine a{
+    color: #000;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    bottom: 0px;
+    position: absolute;
+}
+.FuncLine a:nth-child(2){
+    padding-left: 50px;
+}
+.FuncLine a:nth-child(3){
+    padding-left: 100px;
+}
+.FuncLine a:nth-child(4){
+    padding-left: 150px;
+}
+.FuncLine a:nth-child(5){
+    padding-left: 220px;
+}
+.FuncLine a:nth-child(6){
+    padding-left: 300px;
+}
+.ImgLine{
+    background: #c0c0bd;
+    height: 30px;
+    width: 100vw;
+    position: fixed;
+    top: 57px;
+    left: 0px;
+    color: #fff;
+    z-index: 1;
+}
+.ImgLine a{
+    color: #000;
+    text-align: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    bottom: 0px;
+    position: absolute;
+    font-size: 18px;
+}
+.ImgLine a:nth-child(2){
+    padding-left: 60px;
+}
+.ImgLine a:nth-child(3){
+    padding-left: 110px;
+}
+.ImgLine a:nth-child(4){
+    padding-left: 170px;
+}
+.ImgLine a:nth-child(5){
+    padding-left: 247px;
+}
+.ImgLine a:nth-child(6){
+    padding-left: 320px;
+}
+.title{
+    background: #000081;
+    height: 30px;
+    width: fit-content;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: #fff;
+    text-align: right;
+    z-index: 1;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    position: absolute;
+    top: 150px;
+    left: 25%;
+    border: solid 2px #6a6a6a;
+    text-align: center;
+    transform-origin: 50% 50% 0;
+  }
+.btn1{
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    background: #c0c0bd;
+}
+.btn2{
+    position: fixed;
+    top: 5px;
+    right: 38px;
+    background: #c0c0bd;
+}
+.btn3{
+    position: fixed;
+    top: 5px;
+    right: 75px;
+    background: #c0c0bd;
+}

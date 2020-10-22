@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #262626;
+}
+.youtubeIframe{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(10px);
+}
+.youtubeIframe:not(:hover){
+    filter: blur(10px);
+}
+.youtubeIframe:hover{
+    filter: blur(0);
+    width: 1500px;
+    height: 843px;
+    /* width: 900px;
+    height: 506px; */
+    /* https://scriptygoddess.com/resources/proportioncalc.htm */
+}

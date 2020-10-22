@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="MouseTrackerStyle.css">
+        <meta charset="utf-8">
+        <title>Mouse Tracker</title>
+    </head>
+    <body>
+        <div id="playArea" onmousemove="showCords()" >
+            <div class="vt"></div>
+            <div class="hl"></div>
+            <input type="button" id="btn1" class="btn" onclick="colorChange(this)"></input>
+            <input type="button" id="btn2" class="btn" onclick="colorChange(this)"></input>
+            <input type="button" id="btn3" class="btn" onclick="colorChange(this)"></input>
+            <input type="button" id="btn4" class="btn" onclick="colorChange(this)"></input>
+            <input type="button" id="btn5" class="btn" onclick="colorChange(this)"></input>
+            <input type="button" id="btn6" class="btn" onclick="colorChange(this)"></input>
+            <input type="button" id="btn7" class="btn" onclick="colorChange(this)"></input>
+            <input type="button" id="btn8" class="btn" onclick="colorChange(this)"></input>
+            <input type="button" id="btn9" class="btn" onclick="colorChange(this)"></input>
+        </div>
+        <p id="demo"></p>
+    </body>
+    <script>
+        function showCords(){
+            var x = event.clientX;
+            var y = event.clientY;
+            var coor = "X: " + x + ", Y: " + y;
+            document.getElementById("demo").innerHTML = coor;
+        }
+
+        const cursorVT = document.querySelector('.vt');
+        const cursorHL = document.querySelector('.hl');
+
+        document.addEventListener('mousemove', e => {
+            cursorVT.setAttribute('style', `left: ${e.clientX}px;`)
+            cursorHL.setAttribute('style', `top: ${e.clientY}px;`)
+        })
+
+        function colorChange(elem) {
+            elem.style.background = "#62e875";
+            setTimeout(function(){ elem.style.background = "#ea4f57"; }, 350);
+        }
+    </script>
+</html>

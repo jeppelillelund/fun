@@ -1,0 +1,53 @@
+body{
+    margin: unset;
+    height: 100vh;
+    background: #262626;
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+}
+#cube-container{
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+    top: 50%;
+    left: 50%;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    transition: 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform: translate(-50%, -50%);
+}
+#cube-container .face{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border: 2px solid #27f0e6;
+    background: #63d5f170;
+    box-shadow: 0px 0px 150px #27f0e6;
+}
+#cube-container .face.top{
+    transform: rotateX(90deg);
+    margin-top: -50%;
+}
+#cube-container .face.right{
+    transform: rotateY(90deg);
+    margin-left: 50%;
+}
+#cube-container .face.left{
+    transform: rotateY(-90deg);
+    margin-left: -50%;
+}
+#cube-container .face.bottom{
+    transform: rotateX(90deg);
+    margin-top: 50%;
+}
+#cube-container .face.back{
+    transform: translateZ(125px);
+}
+#cube-container .face.front{
+    transform: translateZ(-125px);
+}
+#cube-container:hover{
+    transform: rotateX(-35deg) rotateY(-40deg) translate(-50%,-50%);
+    transition: 2S cubic-bezier(0.68, 0,55, 0.27, 1.55);
+}

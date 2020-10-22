@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background: linear-gradient(90deg, rgba(36,36,200,1) 0%, rgba(214,27,27,1) 100%); 
+    width: 100vw;
+    height: 100vh;
+}
+.BlueSide{
+    position: absolute;
+    left: 1%;
+    bottom: 50vh;
+    font-size: 2em;
+    transform: translate(0%, 50%);
+    height: 59vh;
+    border: red solid 1px;
+}
+.RedSide{
+    position: absolute;
+    right: 1%;
+    bottom: 50vh;
+    font-size: 2em;
+    transform: translate(0%, 50%);
+    height: 59vh;
+    border: blue solid 1px;
+}
+.ScoreBoard{
+    position: absolute;
+    top: 1%;
+    font-size: 5em;
+    left: 50vw;
+    border: Green solid 1px;
+}
+.ChampBox{
+    width: 370px;
+    height: 85px;
+}
+.BlueTeam{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 2em;
+    height: 10vh;
+    width: 25vw;
+    border: grey solid 1px;
+}
+.RedTeam{
+    position: absolute;
+    top: 5px;
+    Right: 5px;
+    font-size: 2em;
+    height: 10vh;
+    width: 25vw;
+    border: grey solid 1px;
+}
+.BlueSide p{
+    text-align: left;
+    padding-left: 10px;
+    text-transform: uppercase;
+    height: 9vh;
+    border: Black solid 2px;
+}
+.RedSide p{
+    text-align: right;
+    padding-right: 10px;
+    text-transform: uppercase;
+    height: 9vh;
+    border: Black solid 2px;
+}
+.BanBox{
+    border: Black solid 2px;
+    height: 10vh;
+    width: 21vw;
+}
+.BlueSideBans{
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+}
+.RedSideBans{
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+}
+.BanBox i{
+    border: Black solid 1px;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+.RedSideBans i{
+    position: relative;
+    top: 25%;
+    left: 5%;
+    margin: 0px 5px;
+}
+.RedSideBans i:nth-child(3){
+    margin-left: 40px;
+}
+.BlueSideBans i{
+    position: relative;
+    top: 25%;
+    left: 5%;
+    margin: 0px 5px;
+}
+.BlueSideBans i:nth-child(3){
+    margin-Left: 40px;
+}

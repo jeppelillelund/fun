@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+#playArea{
+    min-width: 100vw;
+    min-height: 100vh;
+}
+#demo{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+.vt{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: black;
+}
+.hl{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: black;
+}
+.btn{
+    transform: translate(50%, 50%);
+    z-index: 1;
+}
+#btn1{
+    /* Left Button */
+    position: absolute;
+    top: 49%;
+    left: 40%;
+    background-color: #ea4f57;
+}
+#btn2{
+    /* Top Button */
+    position: absolute;
+    top: 35%;
+    left:49%;
+    background-color: #ea4f57;
+}
+#btn3{
+    /* Right Button */
+    position: absolute;
+    top: 49%;
+    right: 41%;
+    background-color: #ea4f57;
+}
+#btn4{
+    /* Bottom Button */
+    position: absolute;
+    bottom: 35%;
+    right: 50%;
+    background-color: #ea4f57;
+}
+#btn5{
+    /* Middle Button */
+    position: absolute;
+    top: 49%;
+    right: 50%;
+    background-color: #ea4f57;
+}
+#btn6{
+    /* Top Left Button */
+    position: absolute;
+    top:39%;
+    left: 43%;
+    background-color: #ea4f57;
+}
+#btn7{
+    /* Top Right Button */
+    position: absolute;
+    top: 39%;
+    right: 43%;
+    background-color: #ea4f57;
+}
+#btn8{
+    /* Bottom Right Button */
+    position: absolute;
+    bottom: 39%;
+    right: 43%;
+    background-color: #ea4f57;
+}
+#btn9{
+    /* bottom Left Button */
+    position: absolute;
+    bottom: 39%;
+    left: 43%;
+    background-color: #ea4f57;
+}

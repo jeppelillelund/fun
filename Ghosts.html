@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="GhostsStyle.css">
+        <meta charset="utf-8">
+        <title>Phasmophobia Ghosts</title>
+    </head>
+    <body>
+        <table>
+            <tbody>
+                <tr class="firstRow">
+                    <td>
+                        <input type="checkbox" id="eBox1" onclick="EvidenceCheck()"><label>Freezing Temperatures</label>
+                        <input type="checkbox" id="eBox2" onclick="EvidenceCheck()"><label>EMF Level 5</label>
+                        <input type="checkbox" id="eBox3" onclick="EvidenceCheck()"><label>Fingerprints</label>
+                        <br>
+                        <input type="checkbox" id="eBox4" onclick="EvidenceCheck()"><label>Spirit Box</label>
+                        <input type="checkbox" id="eBox5" onclick="EvidenceCheck()"><label>Ghost Orb</label>
+                        <input type="checkbox" id="eBox6" onclick="EvidenceCheck()"><label>Ghost Writing</label>
+
+                    </td>
+                    <td>Name of ghost: 
+                        <input></input>
+                    </td>
+                    <td>
+                        <span>
+                            <input type="button" value="Start Insanity Counter" onclick="startTimer()"></input>
+                            <br>
+                            <div id="TimerEl">5:00</div>
+                    </td>
+                    <td>
+                        <button onclick="showListGen()">General</button>
+                        <button onclick="showListOiuja()">Ouija Board</button>
+                        <br>
+                        <button onclick="showListSpiritBox()">Spirit Box</button>
+                        <button onclick="showListTrigger()">Anger and Attack</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="poltergeistID">
+                        Poltergeist
+                        <div class="div">&nbsp</div>
+                        <div class="div">STRENGTH: Can throw multiple objects at once.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">WEAKNESS: Empty rooms.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">EVIDENCE:  A Spirit Box, Fingerprints, and Ghost Orb.</div>
+                    </td>
+                    <td id="bansheeID">
+                        Banshee
+                        <div class="div">&nbsp</div>
+                        <div class="div">STRENGTH: Targets one player at a time.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">WEAKNESS: The crucifix.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">EVIDENCE:  EMF Level 5, Fingerprints, and Freezing Temperatures.</div>
+                    </td>
+                    <td id="jinnID">
+                        Jinn
+                        <div class="div">&nbsp</div>
+                        <div class="div">STRENGTH: The further you are away, the faster a Jinn is.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">WEAKNESS: Turning off a location’s power source.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">EVIDENCE:  A Spirit Box, Ghost Orb, and EMF Level 5.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="wraithID">
+                        Wraith
+                        <div class="div">&nbsp</div>
+                        <div class="div">STRENGTH: Footsteps cannot be traced.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">WEAKNESS: Reacts to salt.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">EVIDENCE: Fingerprints, Freezing Temperatures, and a Spirit Box.</div>
+                    </td>
+                    <td id="phantomID">
+                        Phantom
+                        <div class="div">&nbsp</div>
+                        <div class="div">STRENGTH: Looking at a phantom will cause your sanity to drop.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">WEAKNESS: Taking its photo will cause it to disappear.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">EVIDENCE: EMF Level 5, Ghost orb, and Freezing Temperatures.</div>
+                    </td>
+                    <td id="mareID">
+                        Mare
+                        <div class="div">&nbsp</div>
+                        <div class="div">STRENGTH: Increased attacks in the dark.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">WEAKNESS: Light.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">EVIDENCE: Spirit Box, Ghost Orb, and Freezing Temperatures.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="shadeID">
+                        Shade
+                        <div class="div">&nbsp</div>
+                        <div class="div">STRENGTH: Hard to find.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">WEAKNESS: A shade won’t hunt if players are in groups.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">EVIDENCE: EMF Level 5, Ghost Orb, and Ghost Writing.</div>
+                    </td>
+                    <td id="demonID">
+                        Demon
+                        <div class="div">&nbsp</div>
+                        <div class="div">STRENGTH: Will attack aggressively.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">WEAKNESS: Asking a question on a ouija board won’t lower a player’s sanity.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">EVIDENCE: A Spirit Box, Ghost Writing, and Freezing Temperatures. </div>
+                    </td>
+                    <td id="yureiID">
+                        Yurei
+                        <div class="div">&nbsp</div>
+                        <div class="div">STRENGTH: Affects player sanity more than normal.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">WEAKNESS: Using a smudge stick to prevent it from moving.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">EVIDENCE: Ghost Orb, Ghost Writing, and Freezing Temperatures.</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="spiritID">
+                        Spirit
+                        <div class="div">&nbsp</div>
+                        <div class="div">STRENGTH: None.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">WEAKNESS: Using smudge sticks to prevent attacks.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">EVIDENCE: A Spirit Box, Fingerprints, and Ghost Writing.</div>
+                    </td>
+                    <td id="revenantID">
+                        Revenant
+                        <div class="div">&nbsp</div>
+                        <div class="div">STRENGTH: Fast when hunting.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">WEAKNESS: Slow when you are hidden.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">EVIDENCE: EMF Level 5, Fingerprints, and Ghost Writing.</div>
+                    </td>
+                    <td id="oniID">
+                        Oni
+                        <div class="div">&nbsp</div>
+                        <div class="div">STRENGTH: Can move objects quickly.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">WEAKNESS: Active when more players are nearby.</div>
+                        <div class="div">&nbsp</div>
+                        <div class="div">EVIDENCE: EMF Level 5, a Spirit Box, and Ghost Writing.</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="listDiv">
+            <ul id="generalList">
+                <li>  Anybody here? </li>
+                <li>  Anybody in the room? </li>
+                <li>  Anybody with us? </li>
+                <li>  Are you angry? </li>
+                <li>  Are you a boy? </li>
+                <li>  Are you a child? </li>
+                <li>  Are you a girl? </li>
+                <li>  Are you a woman? </li>
+                <li>  Are you close? </li>
+                <li>  Are you female? </li>
+                <li>  Are you friendly? </li>
+                <li>  Are you here? </li>
+                <li>  Are you male? </li>
+                <li>  Are you male or female? </li>
+                <li>  Are you old? </li>
+                <li>  Are you with us? </li>
+                <li>  Are you young? </li>
+                <li>  Can we help? </li>
+                <li>  Can you give me your name? </li>
+                <li>  Can you show yourself? </li>
+                <li>  Can you talk? </li>
+                <li>  Do you want to hurt us? </li>
+                <li>  Do you want us here? </li>
+                <li>  Do you want us to leave? </li>
+                <li>  Give us a sign! </li>
+                <li>  Hello? </li>
+                <li>  How old are you? </li>
+                <li>  How young are you? </li>
+                <li>  Is anyone here? </li>
+                <li>  Is there a ghost here? </li>
+                <li>  Is there a spirit here? </li>
+                <li>  Let us know you are here. </li>
+                <li>  Shall we leave? </li>
+                <li>  Should we leave? </li>
+                <li>  Show yourself! </li>
+                <li>  Speak to us! </li>
+                <li>  What are you? </li>
+                <li>  What is your age? </li>
+                <li>  What is your gender? </li>
+                <li>  What is your location? </li>
+                <li>  What is your name? </li>
+                <li>  What do you want? </li>
+                <li>  What should we do? </li>
+                <li>  When were you born? </li>
+                <li>  Where are you? </li>
+                <li>  Who am I talking to? </li>
+                <li>  Who are we talking to? </li>
+                <li>  Who are you? </li>
+                <li>  Who is this? </li>
+                <li>  Why are you here? </li>                                              					   
+            </ul>
+            <ul id="ouijaList">
+                <li> Who did you kill?	</li>			
+                <li> Who is your victim? </li>					
+                <li> What is the name of the person you killed? </li>
+                <li> What is the name of the person you murdered? </li>
+                <li> What is your victim? </li>
+                <li> Did you murder? </li>
+                <li> Who did you murder? </li>
+                <li> Who died? </li>
+                <li> How old are you? </li>
+                <li> What is your age? </li>
+                <li> Are you old? </li>
+                <li> Are you young? </li>
+                <li> How long have you been dead? </li>
+                <li> How many years ago did you die? </li>
+                <li> How long have you been here? </li>
+                <li> How long ago did you die? </li>
+                <li> When did you die? </li>
+                <li> How many are in this room? </li>
+                <li> How many people are in this room? </li>
+                <li> How many people are in here? </li>
+                <li> How many ghosts are in this room? </li>
+                <li> How many ghosts are in here? </li>
+                <li> Are you alone? </li>
+                <li> Are we alone? </li>	
+                <li> Who is here? </li>			
+                <li> Who is in this room? </li>		
+                <li> Where are you? </li>		
+                <li> What is your favorite room? </li>			
+                <li> Where is your room? </li>			
+                <li> What is your room? </li>	
+                <li> Are you here? </li>	
+                <li> Are you close? </li>		
+                <li> Are there any spirits? </li>			
+                <li> Are you near? </li>
+                <li> Are you around? </li>				
+            </ul>
+            <ul id="spiritList">
+                <li> Can you speak? </li>
+                <li> Can you speak to us? </li>
+                <li> Make a noise. </li>
+                <li> Open a door. </li>
+                <li> Open this door. </li>
+                <li> Turn on the light. </li>
+                <li> Turn off the light. </li>
+                <li> Are there any ghosts? </li>
+                <li> Give us a sign. </li>
+                <li> Show us. </li>
+                <li> Let us know you are here. </li>
+                <li> Do something. </li>
+                <li> Is there anyone with me? </li>
+                <li> Scream. </li>
+                <li> Can we speak? </li>
+                <li> Would like to speak to you. </li>
+                <li> Is there anyone here? </li>
+                <li> May I ask you? </li>
+                <li> Would you like to talk? </li>
+                <li> Are you the only one here? </li>
+                <li> Are you waiting? </li>
+                <li> Is there anything I can do? </li>
+                <li> Do you know who we are? </li>
+                <li> Are you happy? </li>
+                <li> Are you here all the time? </li>
+                <li> Are you male or female? </li>
+                <li> Do you want us to leave? </li>
+                <li> Can I ask you? </li>
+                <li> Can you make a sound? </li>
+                <li> Show us your presence. </li>
+                <li> Knock something. </li>
+                <li> Make a sound. </li>
+                <li> Open the door. </li>
+                <li> Throw something. </li>
+                <li> Talk to me. </li>
+                <li> Talk to us. </li>
+                <li> We mean you no harm. </li>
+                <li> We are friends. </li>
+                <li> Is this you’re home? </li>
+                <li> Can you speak to us? </li>
+                <li> I’m scared. </li>
+                <li> I am scared. </li>
+                <li> Scared. </li>
+                <li> Scary. </li>
+                <li> Spooky. </li>
+                <li> Horror. </li>
+                <li> Scare. </li>
+                <li> Frighten. </li>
+                <li> Panic. </li>
+                <li> Fright. </li>
+                <li> Hide. </li>
+                <li> Run. </li>
+                <li> Show your presence. </li>
+                <li> Show us. </li>
+                <li> Show me. </li>
+            </ul>
+            <ul id="triggerList">
+                <li> *Name of the ghost* </li>
+                <li> Motherfucker(high response). </li>
+                <li> I'm scared. </li>
+                <li> I am scared. </li>
+                <li> Scared. </li>
+                <li> Scare. </li>
+                <li> Scary. </li>
+                <li> Ass. </li>
+                <li> Bastard. </li>
+                <li> Bitch. </li>
+                <li> Bloody Mary. </li>
+                <li> Cunt. </li>
+                <li> Crap. </li>
+                <li> Dickhead. </li>
+                <li> Fuck. </li>
+                <li> Hide. </li>
+                <li> Panic. </li>
+                <li> Pussy. </li>
+                <li> Shit. </li>
+                <li> Spooky. </li>
+                <li> Horror. </li>
+                <li> Frighten. </li>
+                <li> Panic. </li>
+                <li> Fright. </li>
+                <li> Run. </li>
+                <li> Show your presence. </li>
+                <li> Show us. </li>
+                <li> Show me. </li>
+            </ul>
+        </div>
+    </body>
+    <script>
+        const startingMinutes = 5;
+        let time = startingMinutes * 60;
+        const countdownEl = document.getElementById("TimerEl")
+
+        function updateCountdown(){
+            const minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            countdownEl.innerHTML = `${minutes}:${seconds}`;
+            time--;
+        }
+
+        function startTimer(){
+            setInterval(updateCountdown, 1000);
+        }
+
+        function showListGen(){
+            var listelem = document.getElementById("generalList");
+            var displaySettings = listelem.style.display;
+
+            if(displaySettings == 'none'){
+                listelem.style.display = "block";
+            }else{
+                listelem.style.display = "none";
+            }
+        }
+
+        function showListOiuja(){
+            var listelem = document.getElementById("ouijaList");
+            var displaySettings = listelem.style.display;
+
+            if(displaySettings == 'none'){
+                listelem.style.display = "block";
+            }else{
+                listelem.style.display = "none";
+            }
+        }
+        
+        function showListSpiritBox(){
+            var listelem = document.getElementById("spiritList");
+            var displaySettings = listelem.style.display;
+
+            if(displaySettings == 'none'){
+                listelem.style.display = "block";
+            }else{
+                listelem.style.display = "none";
+            }
+        }
+        
+        function showListTrigger(){
+            var listelem = document.getElementById("triggerList");
+            var displaySettings = listelem.style.display;
+
+            if(displaySettings == 'none'){
+                listelem.style.display = "block";
+            }else{
+                listelem.style.display = "none";
+            }
+        }
+        // Evidence checkboxes
+        var evidenceTemp = document.getElementById('eBox1');
+        var evidenceEMFLevel = document.getElementById('eBox2');
+        var evidenceFinger = document.getElementById('eBox3');
+        var evidenceBox = document.getElementById('eBox4');
+        var evidenceOrb = document.getElementById('eBox5');
+        var evidenceWriting = document.getElementById('eBox6');
+
+        // Ghost TDs
+        var poltergeistTD = document.getElementById("poltergeistID");
+        var bansheeTD = document.getElementById("bansheeID");
+        var jinnTD = document.getElementById("jinnID");
+        var wraithTD = document.getElementById("wraithID");
+        var phantomTD = document.getElementById("phantomID");
+        var mareTD = document.getElementById("mareID");
+        var shadeTD = document.getElementById("shadeID");
+        var demonTD = document.getElementById("demonID");
+        var yureiTD = document.getElementById("yureiID");
+        var spiritTD = document.getElementById("spiritID");
+        var revenantTD = document.getElementById("revenantID");
+        var oniTD = document.getElementById("oniID");
+
+        var checkedColor = "#2fc950";
+        var defaultColor = "#2b3e50";
+        var evidenceCounter = 2;
+
+        function EvidenceCheck(){
+        //Triple Evidence Freezing Temperature
+        if(evidenceCounter == 1)
+            {
+            if(evidenceTemp.checked == true || evidenceFinger.checked == true || evidenceEMFLevel.checked == true){
+                bansheeTD.style.backgroundColor = checkedColor;
+                }else{
+                bansheeTD.style.backgroundColor = defaultColor;  
+                }
+            }
+            else if(evidenceCounter == 2)
+            {
+                if( evidenceFinger.checked == true && evidenceEMFLevel.checked == true){
+                    bansheeTD.style.backgroundColor    = checkedColor;   
+                    revenantTD.style.backgroundColor    = checkedColor;   
+                }
+                else if(evidenceTemp.checked == true && evidenceFinger.checked == true)
+                {
+                    bansheeTD.style.backgroundColor    = checkedColor; 
+                    wraithTD.style.backgroundColor    = checkedColor; 
+                }
+                else if(evidenceEMFLevel.checked == true && evidenceTemp.checked == true )
+                {
+                    bansheeTD.style.backgroundColor    = checkedColor;
+                    phantomTD.style.backgroundColor    = checkedColor;
+                }
+                else{
+                    poltergeistTD.style.backgroundColor= defaultColor;
+                    bansheeTD.style.backgroundColor    = defaultColor;
+                    jinnTD.style.backgroundColor       = defaultColor;
+                    wraithTD.style.backgroundColor     = defaultColor;
+                    phantomTD.style.backgroundColor    = defaultColor;
+                    mareTD.style.backgroundColor       = defaultColor;
+                    shadeTD.style.backgroundColor      = defaultColor;
+                    demonTD.style.backgroundColor      = defaultColor;
+                    yureiTD.style.backgroundColor      = defaultColor;        
+                    spiritTD.style.backgroundColor     = defaultColor;        
+                    revenantTD.style.backgroundColor   = defaultColor;        
+                    oniTD.style.backgroundColor        = defaultColor;     
+                    }
+
+            }
+            else if(evidenceCounter == 3)
+            {
+                if(evidenceTemp.checked == true && evidenceEMF.checked == true && evidenceFinger.checked == true){
+
+                }
+
+            }
+        }
+    </script>
+</html>
